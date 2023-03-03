@@ -1,0 +1,18 @@
+<table class="table">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Date</th>
+      <th scope="col">Invoice Total</th>
+      <th scope="col">Invoice State</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of allInvoices">
+      <th scope="row">{{c.id}}</th>
+      <td>{{c.date}}</td>
+      <td>{{c.total}} €</td>
+      <td>{{c.state}}</td>
+    </tr>
+  </tbody>
+</table>

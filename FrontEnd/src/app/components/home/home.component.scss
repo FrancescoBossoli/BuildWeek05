@@ -1,0 +1,35 @@
+
+.jumbo{
+  height: 480px;
+  background-image: url(../../../assets/imgs/sfondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  h1,p{
+    text-shadow: 2px 2px 6px black;
+    position: relative;
+  }
+}
+
+.card-img-top{
+  width: 150px !important;
+  margin: 0 auto;
+}
+
+.jumbo::before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.471);
+}
+
+input{
+  width: 200px;
+}
+
+.value {
+  width: 80px;
+}

@@ -1,0 +1,23 @@
+<table class="table">
+  <thead class="table-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Contact Email</th>
+      <th scope="col">Gross Annual Pay</th>
+      <th scope="col">Subscription Date</th>
+      <th scope="col">Last Contact Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of allCustomers">
+      <th scope="row">{{c.id}}</th>
+      <td> <a [routerLink]="['/invoices/'+c.businessName]">{{c.businessName}}</a> </td>
+      <td>{{c.contactEmail}}</td>
+      <td>{{c.gap}} €</td>
+      <td>{{c.subDate}}</td>
+      <td>{{c.lastDate}}</td>
+    </tr>
+  </tbody>
+</table>
+

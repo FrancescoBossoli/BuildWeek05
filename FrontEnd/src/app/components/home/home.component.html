@@ -1,0 +1,107 @@
+<div class="container-fluid px-0">
+  <div class="p-5 mb-4 bg-light rounded-3 jumbo d-flex flex-column justify-content-center">
+    <div class="container-fluid py-5">
+      <h1 class="display-5 fw-bold text-white">Epic Energy Service</h1>
+      <p class="col-md-8 fs-4 text-white">
+        Il mondo appartiene a quelli che hanno la maggiore energia. (Visconte
+        Alexis de Tocqueville)
+      </p>
+    </div>
+  </div>
+  <div class="container-fluid row" *ngIf="this.user != null">
+    <div class="col-md-9 text-end">
+      <div class="text-center">
+        <h2>I Nostri Servizi:</h2>
+        <div>
+          <ul class="list list-unstyled mt-2">
+            <li>
+              <a [routerLink]="['/customers/' + 'gap']">Visualizza fatture per Fatturato Annuale</a>
+            </li>
+            <li>
+              <a [routerLink]="['/customers/' + 'subDate']">Visualizza fatture per Data di Inserimento</a>
+            </li>
+            <li>
+              <a [routerLink]="['/customers/' + 'lastContact']">Visualizza fatture per Data di Ultimo Contatto</a>
+            </li>
+            <li>
+              <a [routerLink]="['/customers/' + 'province']">Visualizza fatture per Provincia della Sede Legale</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="d-flex flex-row justify-content-evenly">
+        <div class="d-flex flex-column align-items-center">
+          <form class="d-flex my-1 w-100 justify-content-end" #form="ngForm" (ngSubmit)="onSubmit()">
+            <label for="exampleInput1" class="form-label">Filtra clienti per fatturato annuale</label>
+            <input type="text" class="form-control mx-3" id="exampleInput1" name="gap" ngModel required />
+
+            <button type="submit" class="btn btn-primary">Cerca</button>
+          </form>
+          <form class="d-flex my-1 w-100 justify-content-end" #form1="ngForm" (ngSubmit)="onSubmit1()">
+            <label for="exampleInputPassword1" class="form-label">Filtra clienti per Data di Inserimento</label>
+            <input type="text" class="form-control mx-3" name="subDate" ngModel required />
+
+            <button type="submit" class="btn btn-primary">Cerca</button>
+          </form>
+          <form class="d-flex my-1 w-100 justify-content-end" #form2="ngForm" (ngSubmit)="onSubmit2()">
+            <label for="exampleInputPassword1" class="form-label">Filtra clienti per Data Ultimo Contatto</label>
+            <input type="text" class="form-control mx-3" name="lastContact" ngModel required />
+
+            <button type="submit" class="btn btn-primary">Cerca</button>
+          </form>
+          <form class="d-flex my-1 w-100 justify-content-end" #form3="ngForm" (ngSubmit)="onSubmit3()">
+            <label for="exampleInputPassword1" class="form-label">Filtra clienti per Nome Parziale</label>
+            <input type="text" class="form-control mx-3" name="partial" ngModel required />
+            <button type="submit" class="btn btn-primary">Cerca</button>
+          </form>
+        </div>
+        <div class="d-flex flex-column align-items-center">
+          <form class="d-flex my-1 w-100 justify-content-end" #form4="ngForm" (ngSubmit)="onSubmit4()">
+            <label for="exampleInput1" class="form-label">Filtra fatture per Data d'inserimento</label>
+            <input type="text" class="form-control mx-3" id="date" name="date" ngModel required />
+
+            <button type="submit" class="btn btn-primary">Cerca</button>
+          </form>
+          <form class="d-flex my-1 w-100 justify-content-end" #form5="ngForm" (ngSubmit)="onSubmit5()">
+            <label for="exampleInputPassword1" class="form-label">Filtra fatture per Anno</label>
+            <input type="text" class="form-control mx-3" name="year" ngModel required />
+
+            <button type="submit" class="btn btn-primary">Cerca</button>
+          </form>
+          <form class="d-flex my-1 w-100 justify-content-end" #form6="ngForm" (ngSubmit)="onSubmit6()">
+            <label for="exampleInputPassword1" class="form-label">Filtra fatture per Stato</label>
+            <input type="text" class="form-control mx-3" name="state" ngModel required />
+
+            <button type="submit" class="btn btn-primary">Cerca</button>
+          </form>
+          <form class="d-flex my-1 w-100 justify-content-end" #form7="ngForm" (ngSubmit)="onSubmit7()">
+            <label for="exampleInputPassword1" class="form-label">Filtra fatture per Importo compreso tra</label>
+            <input type="text" class="form-control mx-3 value" name="moreThan" ngModel required />
+            <label for="exampleInputPassword1" class="form-label"> e</label>
+            <input type="text" class="form-control mx-3 value" name="lessThan" ngModel required />
+            <button type="submit" class="btn btn-primary">Cerca</button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-3">
+      <div class="card mx-auto p-3" style="width: 18rem">
+        <img src=".../../../../../assets/imgs/user.png" width="50px" class="card-img-top" />
+        <div class="card-body">
+          <h5 class="card-title mb-3">Dettagli:</h5>
+          <h6 class="card-subtitle mb-2 text-muted">
+            <i class="fa-solid fa-user"></i> {{ user.name }} {{ user.surname }}
+          </h6>
+          <p class="card-text">
+            <i class="fa fa-envelope"></i> {{ user.email }}
+          </p>
+          <p class="card-text">
+            <i class="fa-sharp fa-solid fa-lock"></i> {{ user.roles[0].name }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
