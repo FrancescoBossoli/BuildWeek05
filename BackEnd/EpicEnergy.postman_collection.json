@@ -1,0 +1,1341 @@
+{
+	"info": {
+		"_postman_id": "0d302f6c-072b-489f-abf1-27a9487e7ff3",
+		"name": "EpicEnergy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25827548"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\" : \"Zorro\",\r\n    \"password\" : \"zorro123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Mario\",\r\n    \"surname\" : \"Rossi\",    \r\n    \"username\" : \"Marius\",\r\n    \"password\" : \"mario123\",\r\n    \"email\" : \"mariorossi@gmail.com\",\r\n    \"roles\" : [\"Administrator\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/auth/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "All Users",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/user/",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"user",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single User",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/user/3",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"user",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single User",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/user/2",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"user",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customers",
+			"item": [
+				{
+					"name": "All Customers",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/customer/",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"customer",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Customers and Filter by Partial Customer Name",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/customer/filter_by_partial_name=figli",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"customer",
+								"filter_by_partial_name=figli"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Customers and Filter by Gross Annual Pay",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/customer/filter_by_gap=100000",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"customer",
+								"filter_by_gap=100000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Customers and Filter by Subscription Date",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/customer/filter_by_sub_date=2021-01-13",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"customer",
+								"filter_by_sub_date=2021-01-13"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Customers and Filter by Last Contact",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/customer/filter_by_last_date=2021-03-31",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"customer",
+								"filter_by_last_date=2021-03-31"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Customers and Order Results by Province",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/customer/order_by_province",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"customer",
+								"order_by_province"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Customers and Order Results by Contact Name",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/customer/by_name",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"customer",
+								"by_name"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Customers and Order Results by Gross Annual Pay",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/customer/by_gap_asc",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"customer",
+								"by_gap_asc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Customers and Order Results by Subscription Date",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/customer/by_date_asc",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"customer",
+								"by_date_asc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Customers and Order Results by Last Contact",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/customer/by_last_date_asc",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"customer",
+								"by_last_date_asc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Customer",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/customer/4",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"customer",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Customer",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/customer",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Customer",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 4,\r\n    \"businessName\": \"Bianchi s.r.l.\",\r\n    \"vatNumber\": 3467890123,\r\n    \"email\": \"luca.bianchi@gmail.com\",\r\n    \"subDate\": \"2021-01-15\",\r\n    \"lastDate\": \"2021-06-30\",\r\n    \"gap\": 27543.22,\r\n    \"pec\": \"simona.bianchi@gmail.com\",\r\n    \"phone\": \"+39 02 8736 9265\",\r\n    \"contactEmail\": \"francesca.bianchi@yahoo.it\",\r\n    \"contactName\": \"Matteo\",\r\n    \"contactSurname\": \"Rossi\",\r\n    \"contactPhone\": \"123-456-7890\",\r\n    \"type\": \"SRL\",\r\n    \"invoices\": [\r\n        {\r\n            \"id\": 4,\r\n            \"year\": 2023,\r\n            \"date\": \"2023-02-28\",\r\n            \"total\": 4500.0,\r\n            \"state\": \"PENDING\"\r\n        },\r\n        {\r\n            \"id\": 5,\r\n            \"year\": 2021,\r\n            \"date\": \"2021-03-01\",\r\n            \"total\": 2156.78,\r\n            \"state\": \"PAID\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/customer/4",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"customer",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Customer",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:9090/customer/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"customer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Invoices",
+			"item": [
+				{
+					"name": "All Invoices",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/invoice/",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"invoice",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Invoices and Filter by Partial Business Name",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/invoice/filter_by_customer=figli",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"invoice",
+								"filter_by_customer=figli"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Invoices and Filter by Invoice State",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/invoice/filter_by_state=PAID",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"invoice",
+								"filter_by_state=PAID"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Invoices and Filter by Exact Date",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/invoice/filter_by_date=2020-07-15",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"invoice",
+								"filter_by_date=2020-07-15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Invoices and Filter by Year",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/invoice/filter_by_year=2020",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"invoice",
+								"filter_by_year=2020"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Invoices and Filter Results by Min and Max Total Pay",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/customer/filter_by_partial_name=figli",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"customer",
+								"filter_by_partial_name=figli"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Invoice",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/invoice/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"invoice",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Invoice",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/invoice",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"invoice"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Invoice",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/invoice/2",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"invoice",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Invoice",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/invoice/2",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"invoice",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Addresses",
+			"item": [
+				{
+					"name": "All Addresses",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/address/",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"address",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Address",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/invoice/",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"invoice",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Address",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/address/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"address",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Address",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/address/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"address",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Address",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/address/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"address",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Provinces",
+			"item": [
+				{
+					"name": "Get All Provinces",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/province/",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"province",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Single Province",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/province/105",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"province",
+								"105"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Municipalities",
+			"item": [
+				{
+					"name": "All Municipalities",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/municipality",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"municipality"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Municipality",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwaXBwb2JhdWRvIiwiaWF0IjoxNjc3ODQ0Mzk5LCJleHAiOjE2Nzc5MzA3OTl9.fmQWQ7DgdRggvb7SK8DJG6LQfielCjqcpOFpyMg70s0Xm0LnlXDl43R_QOwhpNhlreeURApSVaH3qTiAPKXfaQ",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9090/municipality/1",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"municipality",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
